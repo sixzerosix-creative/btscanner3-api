@@ -1,0 +1,9 @@
+Flask
+requests
+beautifulsoup4
+gunicornFlask
+requests
+beautifulsoup4
+gunicorn
+firebase-admin
+google-cloud-storage
