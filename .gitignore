@@ -1,0 +1,20 @@
+# Ignore system files
+.DS_Store
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore logs
+*.log
+
+# Ignore iOS SwiftUI files (if Swift and API are in the same repo)
+*.swift
+*.plist
+Assets.xcassets/
+Preview Content/
+Podfile
