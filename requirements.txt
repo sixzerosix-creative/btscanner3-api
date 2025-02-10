@@ -4,3 +4,4 @@ beautifulsoup4
 gunicorn
 firebase-admin
 google-cloud-storage
+selenium
