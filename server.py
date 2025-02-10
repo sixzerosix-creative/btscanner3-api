@@ -94,32 +94,6 @@ def process_scan():
 
     return jsonify(metadata)
 
-# ✅ Run Flask Locally
+# ✅ Run Flask for Production (Railway, Cloud, etc.)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, debug=True)
-    
-    from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "✅ Flask API is working!"
-
-@app.route("/process_scan", methods=["POST"])
-def process_scan():
-    data = request.get_json()
-    
-    print(f"📥 Received request: {data}")  # Debugging log
-
-    if not data or "image_url" not in data:
-        print("❌ Error: No image URL provided")
-        return jsonify({"error": "No image URL provided"}), 400
-
-    image_url = data["image_url"]
-    print(f"🔍 Processing Image URL: {image_url}")
-
-    return jsonify({"message": "Request received successfully", "image_url": image_url})
-
-if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
